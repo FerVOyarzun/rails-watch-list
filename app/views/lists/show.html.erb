@@ -1,0 +1,21 @@
+<%# <h1>Show de Lists</h1>
+<br>
+<%# br es una linea de separacion %>
+<%# <h1><% @list.name</h1> %>
+<%# <br>
+<%= link_to("Volver a mis listas", lists_path) %>
+
+<%# <%= @list.movie.each do |movie| %>
+  <%# <li><%= movie.title</li> %>
+<%# <% end %>
+<h1>Show de List</h1>
+<br>
+<ul>
+  <% @list.movies.each do |movie| %>
+    <li><%= movie.title %></li>
+  <% end %>
+</ul>
+<br>
+<%= link_to("Volver a las listas", lists_path) %>
+<br>
+<%= link_to("Agregar Bookmark", new_list_bookmark_path(@list)) %>
