@@ -1,9 +1,11 @@
-<h1>Crear nueva lista</h1>
+<div class="container">
+  <h1>Crear nueva lista</h1>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit "Crear lista", class: 'btn btn-primary' %>
-<% end %>
+  <%= simple_form_for @list do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Crear lista", class: 'btn btn-primary' %>
+  <% end %>
 
-<%= link_to("Volver a las listas", lists_path, class: 'btn btn-secondary') %>
+  <%= link_to("Volver a las listas", lists_path, class: 'btn btn-secondary') %>
+</div>
